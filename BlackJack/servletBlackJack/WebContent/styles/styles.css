@@ -1,0 +1,171 @@
+@font-face {
+   	font-family: BebasNeue;
+   	src: url("../font/ttf/BebasNeue_Regular.ttf") format('truetype');
+   	src: url("../font/woff/BebasNeue_Regular.woff") format('woff');
+	}
+body {
+	
+   font-family: BebasNeue;
+    margin:0;
+    font-size: 22px;
+	background-image:url(background.jpg);
+	background-size:cover;
+	
+	color:#FCF8E3;
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+         -o-user-select: none;
+            user-select: none;
+}       
+
+#bid {
+	margin-top:50px;
+}
+
+.col-xs-4 {
+	text-align:center;
+	margin-top:20px;
+}
+
+.row{
+	width:100%;
+}
+
+.bigtext {
+	font-size:50px;
+}
+
+#infotext{
+	margin-left:30px;
+	font-size:50px;
+	margin-top: 50px;
+}
+
+img.card {
+    height:160px;
+}
+
+input {
+    width:180px;
+    height:25px;
+    font-size:16px;
+}
+
+#slider {
+	margin-left: auto; 
+	margin-right: auto;
+	width: 60%;
+}
+
+#panel {
+	margin-top: 75px;
+}
+
+#betbar{
+	margin-top: 15px;
+}
+
+.button {
+ border-top: 1px solid #96d1f8;
+
+   padding: 9.5px 19px;
+   -webkit-border-radius: 15px;
+   border-radius: 15px;
+   -moz-border-radius: 15px;
+   font-size: 30px;
+   font-family: BebasNeue;
+    width:200px;
+   height:60px;
+	background-image:url("../img/button2.png");
+	background-position:center;
+   }
+.sbutton{
+	border-top: 1px solid #96d1f8;
+
+   padding: 9.5px 19px;
+   -webkit-border-radius: 15px;
+   -moz-border-radius: 15px;
+   border-radius: 15px;
+   font-size: 30px;
+   font-family: BebasNeue;
+    width:200px;
+   height:60px;
+	background-image:url("../img/button.png");
+}
+   .logButton {
+   
+   
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+   font-family: BebasNeue;
+   font-size: 18px;
+   height:35px;
+   width:87px;
+   background-image:url("../img/button.png");
+	background-position:center;
+   }
+
+
+#gameResult {
+    font-size:35px;
+}
+        
+#first {
+	height:190px;
+}
+
+#second {
+	height: 240px;
+}
+        
+.refillButton {
+font-size: 18px;
+   height:35px;
+   width:70px;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+   font-family: BebasNeue;
+
+   background-image:url("../img/button.png");
+	background-position:center;
+   }
+   
+.refillButton:disabled {
+	opacity: 0.65;
+	cursor: not-allowed;
+}
+a:hover { 
+color: #a7c8fe!important; 
+text-decoration: none ; 
+}
+button:focus {
+    outline: none;
+}
+
+#deck {
+	height:157px;
+	margin-top:1px;
+}
+
+.sendbutton {
+  font-size: 16px;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+   font-family: BebasNeue;
+   height:35px;
+   background-image:url("../img/button.png");
+	background-position:center;
+   }
+
+   #start button{
+   margin-bottom: 20px;
+   margin-top:55px;
+   }
+
+   

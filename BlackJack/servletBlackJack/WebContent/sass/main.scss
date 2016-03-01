@@ -1,5 +1,11 @@
 @import "./test";
 
+$green: #1abc9c;
+
 .hello {
     box-sizing: 70;
+
+    &:hover {
+        color: $green;
+    }
 }

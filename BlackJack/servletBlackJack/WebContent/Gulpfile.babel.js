@@ -5,6 +5,7 @@ import clean from 'gulp-clean';
 import uglify from 'gulp-uglify';
 import concat from 'gulp-concat';
 import jasmine from 'gulp-jasmine';
+import reporters from 'jasmine-reporters';
 import autoprefixer from 'gulp-autoprefixer';
 import eslint from 'gulp-eslint';
 import morecss from 'gulp-more-css';
@@ -70,3 +71,31 @@ gulp.task('js:watch', () => {
             console.log(`File ${event.path} was ${event.type}, running tasks...`);
         });
 });
+
+
+// Gulp task for running test specs with Jasmine
+gulp.task('jasmine', () => {
+    gulp
+        .src('./spec/**/*.js')
+        .pipe(jasmine());
+});
+
+
+// Gulp task for watching and livereloading
+// Jasmine test suits.
+gulp.task('jasmine:watch', () => {
+    gulp
+        .watch('./spec/**/*.js', ['jasmine'])
+        .on('change', (event) => {
+            console.log(`File ${event.path} was ${event.type}, running tasks...`);
+        });
+});
+
+
+// Gulp task-alias for running and watching test specs.
+gulp.task('spec', ['jasmine:watch']);
+
+
+// The default Gulp task that runs styles
+// and js watchers simultaneously.
+gulp.task('default', ['js:watch', 'sass:watch']);

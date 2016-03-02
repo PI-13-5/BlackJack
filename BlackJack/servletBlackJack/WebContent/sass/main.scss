@@ -1,11 +1,16 @@
-@import "./test";
+// Vendor libraries
+@import 'vendors/bootstrap';
+@import 'vendors/jquery-ui';
 
-$green: #1abc9c;
+// Base styles
+@import 'base/normalize';
+@import 'base/typography';
 
-.hello {
-    box-sizing: 70;
+// Styles for components
+@import 'components/buttons';
+@import 'components/navigation';
 
-    &:hover {
-        color: $green;
-    }
-}
+// Layout
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/footer';

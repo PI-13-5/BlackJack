@@ -1,5 +1,4 @@
-function random() {
-    return 4;
+export function random() {
+    const wtf = ((a) => a)(4);
+    return wtf;
 }
-
-export function random;

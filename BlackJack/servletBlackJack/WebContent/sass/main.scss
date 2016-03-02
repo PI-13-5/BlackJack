@@ -1,11 +1,26 @@
-@import "./test";
+// This file should contain only imports from
+// other files, and generally, if no new files
+// are added into any of ./sass directory folders,
+// it should not be edited.
 
-$green: #1abc9c;
 
-.hello {
-    box-sizing: 70;
+// Vendor libraries
+@import 'vendors/bootstrap';
+@import 'vendors/jquery-ui';
 
-    &:hover {
-        color: $green;
-    }
-}
+// Helpers
+@import 'helpers/mixins';
+@import 'helpers/variables';
+
+// Base styles
+@import 'base/normalize';
+@import 'base/typography';
+
+// Styles for components
+@import 'components/buttons';
+@import 'components/navigation';
+
+// Layout
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/footer';

@@ -1,6 +1,16 @@
+// This file should contain only imports from
+// other files, and generally, if no new files
+// are added into any of ./sass directory folders,
+// it should not be edited.
+
+
 // Vendor libraries
 @import 'vendors/bootstrap';
 @import 'vendors/jquery-ui';
+
+// Helpers
+@import 'helpers/mixins';
+@import 'helpers/variables';
 
 // Base styles
 @import 'base/normalize';

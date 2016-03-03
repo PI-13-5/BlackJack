@@ -3,11 +3,11 @@ BlackJack server application and database setup guide
 
 Table of Contents
 
-1. Requirements
+ 1. Requirements
 
-2. MySQL Setup
-
-3. Application Deployment
+ 2. MySQL Setup
+ 
+ 3. Application Deployment
 
 	3.1 Deploying application using Eclipse
 	
@@ -17,9 +17,8 @@ Table of Contents
 	
 ==============================================
 
-1. Requirements: Tomcat 7+, MySQL 5.5+, Eclipse EE package(recommended to have m2e plugin)
-
-==============================================
+1. Requirements:
+ Tomcat 7+, MySQL 5.5+, Eclipse EE package(recommended to have m2e plugin)
 
 2. MySQL Setup
 
@@ -28,14 +27,12 @@ Table of Contents
 	create a database user or grant full privilegies to existing one, remember username and password,
 	aswell as database location(adress and port)as these options will be used while configuring 
 	application(section 3.3).
-	
-==============================================
 
 3. Application Deployment
 
 	!!!Note that you need to configure application using 3.3 Configuration section before running!!!
 	
-	3.1Deploying application using Eclipse
+	3.1 Deploying application using Eclipse
 		To open application in Eclipse IDE(EE package), In eclipse Press File>import>Existing project>
 	[Application/servletBlackJack location].
 	Then, connect Tomcat server to Eclipse, rightclick>Add and remove> drag servletBlackJack
@@ -63,3 +60,4 @@ Table of Contents
 	different from default(servletBlackJack), you need to open constants.js	in WebContent/_js folder
 	and set constant restAdress to "http:[hostadress]:[port]/[ApplicationName]*/rest
 	*If you are deploying application under name ROOT, leave ApplicationName empty.
+

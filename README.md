@@ -56,7 +56,7 @@ Table of Contents
 	name different from 'black' and/or port different from 3306, you need to set up host as
 	jdbc:mysql://[databaseadress]:[port]/[databasename]
 	
-		If you are deploying application at host different from localhost or with application name,
+	If you are deploying application at host different from localhost or with application name,
 	different from default(servletBlackJack), you need to open constants.js	in WebContent/_js folder
 	and set constant restAdress to "http:[hostadress]:[port]/[ApplicationName]*/rest
 	*If you are deploying application under name ROOT, leave ApplicationName empty.

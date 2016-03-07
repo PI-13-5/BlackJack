@@ -6,7 +6,7 @@
 <title><jsp:invoke fragment="header"></jsp:invoke> - BlackJack</title>
 <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="_css/styles.css">
-<script src="_js/lib/complaint.js"></script>
+<script src="production/js/all.min.js"></script>
 </head>
 <body>
 	<div id="content">

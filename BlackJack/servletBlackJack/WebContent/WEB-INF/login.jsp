@@ -9,10 +9,10 @@
 	<div class="form_container" id = "form_login">
 		<form action="login" method="post">
 		<br/>
-			<label class="register_label">Login</label><br/> 
+			<label class="register_label">Login</label><br/>
 			<input type="text" name="username" required
-				autofocus class="text_input"></input><br> 
-				<label class = "register_label">Password</label></br> 
+				autofocus class="text_input"></input><br>
+				<label class = "register_label">Password</label></br>
 				<input
 				type="password" name="password" required class="text_input"></input><br/>
 				<input class="register_btn" type="submit" value="Log in"></input><br/>

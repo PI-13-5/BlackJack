@@ -4,35 +4,22 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
     <meta charset="utf-8" />
+    <meta name="viewport" content="target-densitydpi=device-dpi" />
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="styles/styles.css" />
-	<script src="_js/lib/jquery-2.1.1.js"></script>
-	<script src="_js/lib/jquery.flip.js"></script>
-	<script src="_js/lib/bootbox.min.js"></script>
-	<script src="_js/blackJack.js"></script>
-	<script src="_js/constants.js"></script>
-	<script src="_js/view.js"></script>
     <link rel="stylesheet" href="_js/lib/jquery-ui-1.11.4/jquery-ui.css" />
-    <script src="_js/lib/jquery-ui-1.11.4/jquery-ui.js"></script>
-	<script src="sweetalert-master/dist/sweetalert.min.js"></script>
-	<link rel = "stylesheet" type = "text/css" href = "sweetalert-master/dist/sweetalert.css">
-    <script src="_js/slider.js"></script>
-    <meta name="viewport" content="target-densitydpi=device-dpi" />
-        
+    <link rel ="stylesheet" type="text/css" href="sweetalert-master/dist/sweetalert.css">
+    <script src="production/js/all.min.js"></script>
 </head>
 <body>
 
-    
-
         <div id="side">
-            <img src="img/cards/background.png" class="card"  /> 
-            
-            
+            <img src="img/cards/background.png" class="card"  />
+
         </div>
 
 
         <div id="center">
-            
             <div >
                 <div id="right"><p id="dealerSum" style="padding-right:30px"></p></div><!--полученные карты диллера-->
                 <div id="left" style="position:relative">
@@ -60,7 +47,6 @@
 				 <div id="infotext"></div>
                      <button class="sbutton" id="startButton">START</button>
                  </div>
-                
             <div>
                 <div id="right" style="padding-top:50px; padding-bottom:120px">
                     <div id="playerSum" style="padding-right:30px"></div> <!--тут будут очки игрока-->
@@ -87,7 +73,7 @@
                 <p>&nbsp;</p>
             </div>
 			<div id="panel" hidden="true">
-            
+
                 <button  class="button" id="hit" >HIT</button>
                 <button  class="button" id="stand">STAND</button>
 
@@ -103,25 +89,21 @@
                 <button class="sendbutton" id="sendBet">Make bet</button>
             </div>
 			</div>
-    </div>      
-    
+    </div>
+
         <div id="side" style="padding-top:20px;text-align:center;">
         <p style="padding-top:20px;">Username <br /> <input type="text" /></p>
             <p>Password <br /> <input type="password" /></p>
             <button class="logButton">LOG IN</button>
             <div style="padding-top:120px;">
             <p id="bid">Bid: <br />&nbsp;</p> <!--ставка-->
-                
+
             </div>
-           
+
             <div style="padding-top:120px;">
                 <p id="balance">Balance: <br /></p>
             </div>
              <button class="refillButton">REFILL</button>
         </div>
-        
-        
-
 </body>
 </html>
-

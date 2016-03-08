@@ -18,20 +18,20 @@ public class UserPageServlet extends HttpServlet {
 
 	UserManager userManager = UserManager.getManager();
 
-	protected void doGet(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		User user = (User) request.getSession().getAttribute("user");
 		try {
 			User newUser = userManager.getUser(user.getLogin());
 			request.getSession().setAttribute("user", newUser);
 			request.getRequestDispatcher("/WEB-INF/userpage.jsp").forward(request, response);
-		} catch (PersistenceException |NullPointerException e) {
+		} catch (PersistenceException | NullPointerException e) {
 			response.sendRedirect("login");
 		}
 	}
 
-	protected void doPost(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 	}
 

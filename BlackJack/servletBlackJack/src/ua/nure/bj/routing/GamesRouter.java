@@ -11,10 +11,15 @@ import ua.nure.bj.game.BlackJackGame;
 import ua.nure.bj.game.UnregisteredBlackJackGame;
 
 public class GamesRouter {
+
 	private static final long CLEANER_COOLDOWN = 300_000;
+
 	private static final long GAME_MAX_NON_ACTIVE = CLEANER_COOLDOWN;
+
 	Timer cleaner = new Timer();
+
 	private ConcurrentHashMap<String, BlackJackGame> games = new ConcurrentHashMap<String, BlackJackGame>();
+
 	private ConcurrentHashMap<String, UnregisteredBlackJackGame> uregisteredUserGames = new ConcurrentHashMap<String, UnregisteredBlackJackGame>();
 
 	public GamesRouter() {
@@ -28,8 +33,8 @@ public class GamesRouter {
 				Date now = new Date();
 				int gamesKilled = 0;
 				Enumeration<String> keys = games.keys();
-				while(keys.hasMoreElements()){
-					String elem=keys.nextElement();
+				while (keys.hasMoreElements()) {
+					String elem = keys.nextElement();
 					Date launched = games.get(elem).getLastLaunched();
 					long diff = now.getTime() - launched.getTime();// as given
 					long seconds = TimeUnit.MILLISECONDS.toMillis(diff);
@@ -39,25 +44,20 @@ public class GamesRouter {
 					}
 				}
 				if (gamesKilled > 0) {
-					System.out.println("router's cleaner: games killed: "
-							+ gamesKilled);
+					System.out.println("router's cleaner: games killed: " + gamesKilled);
 				}
 			}
 		}, CLEANER_COOLDOWN, CLEANER_COOLDOWN);
 
 	}
 
-	public HashMap<String, String> handleUserRequest(String userId,
-			String command) {
-		HashMap<String, String> result = getUserGame(userId).respond(userId,
-				command);
+	public HashMap<String, String> handleUserRequest(String userId, String command) {
+		HashMap<String, String> result = getUserGame(userId).respond(userId, command);
 		return result;
 	}
 
-	public HashMap<String, String> handleUnregisteredUserRequest(String userId,
-			String command) {
-		HashMap<String, String> result = getUnregisteredUserGame(userId)
-				.respond(userId, command);
+	public HashMap<String, String> handleUnregisteredUserRequest(String userId, String command) {
+		HashMap<String, String> result = getUnregisteredUserGame(userId).respond(userId, command);
 		return result;
 	}
 
@@ -69,7 +69,7 @@ public class GamesRouter {
 			}
 			return game;
 		} catch (NullPointerException ex) {
-			System.out.println("creating new game for unregistered "+userId);
+			System.out.println("creating new game for unregistered " + userId);
 			uregisteredUserGames.put(userId, new UnregisteredBlackJackGame());
 			return uregisteredUserGames.get(userId);
 		}
@@ -83,7 +83,7 @@ public class GamesRouter {
 			}
 			return game;
 		} catch (NullPointerException ex) {
-			System.out.println("creating new game for "+userId);
+			System.out.println("creating new game for " + userId);
 			games.put(userId, new BlackJackGame(userId));
 			return games.get(userId);
 		}
